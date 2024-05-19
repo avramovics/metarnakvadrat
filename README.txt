@@ -15,6 +15,7 @@ server {
 
 $ sudo service nginx restart
 
+
 3. Install the CodeDeploy agent for Ubuntu Server follow instructions: 
 https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install-ubuntu.html
 
