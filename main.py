@@ -4,4 +4,4 @@ app = FastAPI()
 
 @app.get("/")
 async def read_root():
-    return {"message": "Hello, World pipeline this is a new shiiish 6"}
+    return {"message": "Hello, World pipeline this is a new shiiish 7"}
