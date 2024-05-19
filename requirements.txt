@@ -1,2 +1,1 @@
-uvicorn
-fastapi
+python3-fastapi
