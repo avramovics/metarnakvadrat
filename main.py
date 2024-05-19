@@ -13,7 +13,7 @@ class Item(BaseModel):
     name: str
     description: str = None
 
-@app.post("/items/", response_model=Item)
+@app.post("/items", response_model=Item)
 async def create_item(item: Item):
     # Check if item already exists
     if any(existing_item["id"] == item.id for existing_item in items_db):
