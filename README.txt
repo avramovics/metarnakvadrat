@@ -26,6 +26,44 @@ $ tmux
 https://stackoverflow.com/questions/21193988/keep-server-running-on-ec2-instance-after-ssh-is-terminated
 
 
+6. update supervizor
+
+
+Copy code
+sudo apt-get update
+sudo apt-get install supervisor
+
+$ which uvicorn
+$ sudo nano /etc/supervisor/conf.d/myapp.conf
+
+[program:myapp]
+command=/path/to/uvicorn your_app_module:app --host 0.0.0.0 --port 8000
+directory=/path/to/your/app
+autostart=true
+autorestart=true
+stderr_logfile=/var/log/myapp.err.log
+stdout_logfile=/var/log/myapp.out.log
+
+$ sudo supervisorctl reread
+$ sudo supervisorctl update
+$ sudo supervisorctl start myapp 
+$ sudo supervisorctl start myapp
+
+
+Install 
+$ sudo apt-get update
+$ sudo apt-get install python3-venv
+
+cd ~/myapp
+python3 -m venv venv
+
+Activate the Virtual Environment
+
+$ source venv/bin/activate
+Install requierments
+$ pip3 install -r requirements.txt
+
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
 
 Check Disk Space:
