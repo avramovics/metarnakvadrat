@@ -14,8 +14,8 @@ class Item(BaseModel):
     description: str = None
 
 @app.get("/", response_model=List[Item])
-async def read_items():
-    return "server started"
+async def server_message():
+    return {"message":"server started"}
 
 
 @app.post("/items", response_model=Item)
