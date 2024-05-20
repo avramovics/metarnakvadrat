@@ -13,6 +13,11 @@ class Item(BaseModel):
     name: str
     description: str = None
 
+@app.get("/", response_model=List[Item])
+async def read_items():
+    return "server started"
+
+
 @app.post("/items", response_model=Item)
 async def create_item(item: Item):
     # Check if item already exists
