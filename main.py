@@ -14,7 +14,7 @@ class Item(BaseModel):
     description: str = None
 
 @app.get("/")
-async def server_message():
+async def root():
     return {"message": "server started"}
 
 
