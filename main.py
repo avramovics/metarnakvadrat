@@ -26,6 +26,10 @@ def create_task(id, title, description):
 app = FastAPI()
 
 
+
+
+
+
 @app.get("/")
 async def get_items():
     id= 1
@@ -33,14 +37,14 @@ async def get_items():
     description ="desc" 
     return create_task( id, title, description )
 
-@app.post("/tasks/", response_model=Task)
+@app.post("/tasks", response_model=Task)
 def create_task_route(task: Task):
     id= 1
     title = "Test"
     description ="desc" 
     return create_task( id, title, description )
 
-@app.get("/tasks/", response_model=List[Task])
+@app.get("/tasks", response_model=List[Task])
 def list_tasks():
     return tasks
 
