@@ -6,7 +6,7 @@ from pydantic import BaseModel
 from typing import List
 #import time
 
-from app.routes.api.api_v1.api import api_router
+#from app.routes.api.api_v1.api import api_router
 
 
 
