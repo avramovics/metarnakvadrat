@@ -34,7 +34,7 @@ items = {
 
 
 
-@router.get("")
+@router.get("/")
 def get_items():
     return items
 
