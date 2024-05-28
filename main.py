@@ -46,6 +46,6 @@ def list_tasks():
 
 #app.include_router(api_router)
 
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=80, reload=True)
+#if __name__ == "__main__":
+ #   import uvicorn
+ #   uvicorn.run(app, host="0.0.0.0", port=80, reload=True)
