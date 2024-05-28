@@ -3,7 +3,6 @@ from fastapi import APIRouter, Depends
 from fastapi.responses import HTMLResponse
 import datetime
 
-from .....helper.h_v1.position import prep_array_planets, prep_array_houses, display_houses, display_planets
 from .....helper.h_v1.sinastry import synastry, synastry_houses,compatibility
 
 from .....model.model import User
