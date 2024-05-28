@@ -6,7 +6,7 @@ from pydantic import BaseModel
 from typing import List
 #import time
 
-#from app.routes.api.api_v1.api import api_router
+from app.routes.api.api_v1.api import api_router
 
 
 
@@ -44,8 +44,4 @@ def create_task_route(task: Task):
 def list_tasks():
     return tasks
 
-#app.include_router(api_router)
-
-#if __name__ == "__main__":
- #   import uvicorn
- #   uvicorn.run(app, host="0.0.0.0", port=80, reload=True)
+app.include_router(api_router)
