@@ -44,7 +44,7 @@ def create_task_route(task: Task):
 def list_tasks():
     return tasks
 
-app.include_router(api_router)
+#app.include_router(api_router)
 
 if __name__ == "__main__":
     import uvicorn
