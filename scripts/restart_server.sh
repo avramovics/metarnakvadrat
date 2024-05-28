@@ -6,10 +6,7 @@ COMMAND="uvicorn main:app --host 0.0.0.0 --port 8000"
 
 # Function to start the server
 start_server() {
-    source ~/venv/bin/activate
-    cd ~/myapp
-    nohup $COMMAND &
-    deactivate
+    uvicorn main:app --host 0.0.0.0 --port 8000
     echo "Server started successfully."
 }
 
