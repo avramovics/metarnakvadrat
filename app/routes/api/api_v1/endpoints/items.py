@@ -1,8 +1,7 @@
 # Route definitions
-from fastapi import  Request, Response
-from fastapi.routing import APIRouter
+from fastapi import APIRouter
 from pydantic import BaseModel 
-from fastapi import HTTPException
+
 
 from pydantic import BaseModel 
 from enum import Enum
