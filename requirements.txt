@@ -1,3 +1,7 @@
-fastapi
-uvicorn
-mysql-connector-python
+python3-fastapi==0.68.1
+python3-requests==2.31.0
+python3-pydantic
+python3-sqlalchemy==2.0.23
+python3-uvicorn
+python3-mysql-connector-python
+python3-python-dotenv

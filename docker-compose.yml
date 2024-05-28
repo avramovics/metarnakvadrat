@@ -1,22 +1,35 @@
-version: '3.8'
-
+version: "3"
 services:
-  fastapi:
-    build: .
-    ports:
-      - "8000:8000"
-    depends_on:
-      - mysql
-
   mysql:
-    image: mysql:8.0
+    image: mysql:8
+    container_name: mysql
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: testdb
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: mydatabase
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypassword
     ports:
       - "3306:3306"
-    volumes:
-      - mysql_data:/var/lib/mysql
 
-volumes:
-  mysql_data:
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    links:
+      - mysql
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      PMA_USER: root
+      PMA_PASSWORD: root_password
+  web:
+    build: .
+    restart: always
+    command: uvicorn main:app --host 0.0.0.0 --port 80 --reload
+    volumes:
+      - .:/app
+    ports:
+      - "8008:80"
+    depends_on:
+      - mysql
