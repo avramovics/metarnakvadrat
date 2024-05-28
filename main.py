@@ -28,7 +28,7 @@ app = FastAPI()
 
 
 
-
+app.include_router(api_router)
 
 @app.get("/")
 async def get_items():
@@ -48,4 +48,4 @@ def create_task_route(task: Task):
 def list_tasks():
     return tasks
 
-app.include_router(api_router)
+
