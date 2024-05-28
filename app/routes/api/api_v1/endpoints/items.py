@@ -29,7 +29,7 @@ items = {
     2: Item( name="Nails" ,price=1.99 ,count=100 ,id=2 ,category=Category.CONSUMABLES )
 }
 
-@router.get("/list")
+@router.get("/items/list")
 def get_items():
     return items
 
