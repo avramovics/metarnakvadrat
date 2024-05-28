@@ -4,8 +4,6 @@ from fastapi.routing import APIRoute
 from pydantic import BaseModel 
 from fastapi import HTTPException
 
-
-
 from pydantic import BaseModel 
 from enum import Enum
 
@@ -34,7 +32,7 @@ items = {
 
 
 
-@router.get("")
+@router.get("/list")
 def get_items():
     return items
 
