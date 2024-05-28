@@ -1,6 +1,6 @@
 # Route definitions
 from fastapi import APIRouter, Request, Response
-from fastapi.routing import APIRoute
+from fastapi.routing import APIRouter
 from pydantic import BaseModel 
 from fastapi import HTTPException
 
@@ -30,8 +30,6 @@ items = {
     2: Item( name="Nails" ,price=1.99 ,count=100 ,id=2 ,category=Category.CONSUMABLES )
 }
 
-
-
 @router.get("/list")
 def get_items():
     return items
@@ -43,9 +41,3 @@ def get_items():
 #    return  items[id]
 
 
-
-@router.post("/i")
-def create_or_update_item(item: Item):
-    # Add the item to the dictionary with its ID as the key
-    items[item.id] = item
-    return item
