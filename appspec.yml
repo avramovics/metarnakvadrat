@@ -4,6 +4,7 @@ files:
   - source: /
     destination: /home/ubuntu/myapp
 
+
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
