@@ -2,7 +2,10 @@ from fastapi import APIRouter
 from pydantic import BaseModel
 from enum import Enum
 
-router = APIRouter()
+
+
+# Create an APIRouter instance
+router = APIRouter(redirect_slashes=False)
 
 class Category(Enum):
     TOOLS = "tools"
