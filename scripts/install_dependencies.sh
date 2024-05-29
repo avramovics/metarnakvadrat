@@ -5,4 +5,4 @@ python3 -m venv venv
 source myenv/bin/activate
 cd myapp
 pip install -r requirements.txt
-deactivate
+#deactivate
