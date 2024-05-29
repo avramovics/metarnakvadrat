@@ -15,7 +15,7 @@ if lsof -i -P -n | grep -q ":$PORT (LISTEN)"; then
     echo "Server is already running on $HOST:$PORT"
 else
     echo "Starting server on $HOST:$PORT"
-    source ~/venv/bin/activate  # Activate the virtual environment
+   # source ~/venv/bin/activate  # Activate the virtual environment
     uvicorn $APP --host $HOST --port $PORT  # Start the server
-    deactivate  # Deactivate the virtual environment after starting the server
+   # deactivate  # Deactivate the virtual environment after starting the server
 fi
