@@ -10,5 +10,5 @@ if pgrep -f "$COMMAND" > /dev/null; then
     pkill -f "$COMMAND"
     echo "Server stopped successfully."
 else
-    echo "Server is not running."
+    echo "Server is not running. "
 fi
