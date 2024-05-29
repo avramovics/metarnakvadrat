@@ -1,7 +1,10 @@
 1. install python3 and all dependencies on EC2 use Ubuntu server. 
 $ sudo apt-get update
 $ sudo apt-get install -y python3 python3-pip python3-venv
+
+
 2. setup server, edit server_name to match ip adress of EC2: 
+
 $  sudo apt install nginx
 $ sudo nano /etc/nginx/sites-enabled/fastapi_nginx
 server {
@@ -73,3 +76,7 @@ Ensure that your system has enough disk space:
 $ df -h
 
 
+I had a problem when module was installed but it did not work when i ran the app
+i needed to reload server: 
+
+$ python -m uvicorn main:app --reload
