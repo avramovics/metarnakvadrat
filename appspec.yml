@@ -14,7 +14,7 @@ hooks:
       timeout: 300
       runas: ubuntu
   ApplicationStop:
-    - location: scripts/stop_server.sh
+    - location: scripts/stop_server_sh.sh
       timeout: 300
       runas: ubuntu 
   ValidateService:
