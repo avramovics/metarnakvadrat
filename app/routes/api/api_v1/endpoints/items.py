@@ -5,7 +5,7 @@ from enum import Enum
 
 
 # Create an APIRouter instance
-router = APIRouter(redirect_slashes=False)
+router = APIRouter()
 
 class Category(Enum):
     TOOLS = "tools"
