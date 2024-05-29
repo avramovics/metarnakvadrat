@@ -8,8 +8,14 @@ from ..api_v1.endpoints import (
     #synastry
     )
 
-api_router = APIRouter(redirect_slashes=False)
-api_router.include_router(items.router, prefix="/items", tags=["items"], include_in_schema=True)
+api_router = APIRouter()
+api_router.include_router(
+                          items.router, 
+                          prefix="/items", 
+                          tags=["items"], 
+                          include_in_schema=True,
+                          redirect_slashes=False
+                          )
 
 
 #api_router.include_router(chart.router, prefix="/chart", tags=["healthcheck"])
