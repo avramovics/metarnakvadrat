@@ -21,4 +21,7 @@ then
     start_server
 else
     echo "Server is not running. Starting server..."
+    echo "Starting server..."
+    start_server
+
 fi
