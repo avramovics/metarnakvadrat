@@ -18,7 +18,7 @@ def create_task(id, title, description):
 @app.get("/")
 async def get_items():
     id= 1
-    title = "Test"
+    title = "Buildig the app"
     description ="desc" 
     return create_task( id, title, description )
 
