@@ -14,6 +14,8 @@ cd $APP_DIR
 if lsof -i -P -n | grep -q ":$PORT (LISTEN)"; then
     echo "Server is already running on $HOST:$PORT"
 else
+   # python3 -m venv venv
+   # source venv/bin/activate
     echo "Starting server on $HOST:$PORT"
    # source ~/venv/bin/activate  # Activate the virtual environment
     uvicorn $APP --host $HOST --port $PORT & # Start the server
