@@ -5,3 +5,4 @@ sqlalchemy==2.0.23
 uvicorn
 mysql-connector-python
 python-dotenv
+pymysql

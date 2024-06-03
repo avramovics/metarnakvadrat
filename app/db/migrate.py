@@ -1,6 +1,7 @@
 '''
 To migrate run command docker exec -it <container name> bash 
 then run command python3 ./app/db/migrate.py
+
 '''
 
 import os
@@ -15,14 +16,8 @@ sys.path.append(app_parent_dir)
 
 from sqlalchemy import create_engine, Column, Integer, String,  text, inspect    
 
-
 from app.model.model import sqlalchemy_models
 from app.db.db import engine
-
-
-
-
-
 
 for models in sqlalchemy_models:
 

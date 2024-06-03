@@ -80,3 +80,9 @@ I had a problem when module was installed but it did not work when i ran the app
 i needed to reload server: 
 
 $ python -m uvicorn main:app --reload
+
+this shit needs to run in order to run uvicorn, 
+othervise it will complain on fastapi not beeng installed:
+
+$ python3 -m venv venv
+$ source venv/bin/activate
