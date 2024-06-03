@@ -18,6 +18,8 @@ else
    # source venv/bin/activate
     echo "Starting server on $HOST:$PORT"
    # source ~/venv/bin/activate  # Activate the virtual environment
-    uvicorn $APP --host $HOST --port $PORT & # Start the server
+    
+   # uvicorn $APP --host $HOST --port $PORT & # Start the server
+   
    # deactivate  # Deactivate the virtual environment after starting the server
 fi
