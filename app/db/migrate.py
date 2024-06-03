@@ -1,7 +1,6 @@
 '''
 To migrate run command docker exec -it <container name> bash 
 then run command python3 ./app/db/migrate.py
-
 '''
 
 import os
