@@ -1,3 +1,17 @@
+
+Firs of all dont use ngix! 
+Disable Nginx to Prevent it from Starting on Boot
+$ sudo systemctl stop nginx
+
+Step 2: Verify Nginx is Stopped
+$sudo systemctl disable nginx
+
+You can check if Nginx has stopped by running:
+$sudo systemctl status nginx
+
+
+
+
 install Docker using apt if you are using an EC2 instance running a Debian-based distribution such as Ubuntu. Here are the steps to install Docker on an Ubuntu EC2 instance:
 
 1. Update the package index
